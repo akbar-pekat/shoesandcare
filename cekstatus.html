@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shoes and Care</title>
+  <link rel="shortcut icon" href="icon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="loading-page">
+    <div class="counter">
+      <p>Loading</p>
+      <h1>0%</h1>
+      <hr>
+    </div>
+  </div>
+  <div class="wrapper">
+    <header class="header2">
+      <nav>
+        <div class="menu-icon">
+          <img src="https://img.icons8.com/android/25/FFFFFF/menu.png">
+        </div>
+        <div class="logo">
+          <a href="/">
+            <img src="logo.png" height="70">
+          </a>
+        </div>
+        <div class="menu">
+          <ul class="navContent">
+            <li><a href="/" data-hover="Home">Home</a></li>
+            <li class="current"><a href="#" data-hover="Cek Status">Cek Status</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container d-flex justify-content-center">
+        <div class="container-sd2 text-center">
+          <form>
+            <div class="form-group text-white">
+              <label for="np-field">Nomor Tranksaksi Anda</label>
+              <input type="text" pattern="[A-Za-z0-9]{7}" class="form-control" id="np-field" aria-describedby="npHelp">
+              <small id="npHelp" class="form-text text-muted">Nomor Tranksaksi biasanya tertera pada struk.</small>
+            </div>
+            <button type="button" class="btn btn-light btn-block" data-toggle="modal" data-target="#cptModal">Cek Status</button>
+          </form>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="modal fade" id="cptModal" tabindex="-1" role="dialog" aria-labelledby="cptModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-0">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cptModalLabel">Customer Product Tracking</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="60" class="slider" id="myRange" disabled>
+            <p>Status: <span id="ccTrack"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  var _0xc6a7=["\x63\x6C\x69\x63\x6B","\x73\x68\x6F\x77\x69\x6E\x67","\x74\x6F\x67\x67\x6C\x65\x43\x6C\x61\x73\x73","\x6E\x61\x76\x20\x75\x6C","\x6F\x6E","\x2E\x6D\x65\x6E\x75\x2D\x69\x63\x6F\x6E","\x72\x65\x61\x64\x79","\x73\x63\x72\x6F\x6C\x6C","\x73\x63\x72\x6F\x6C\x6C\x54\x6F\x70","\x62\x6C\x61\x63\x6B","\x61\x64\x64\x43\x6C\x61\x73\x73","\x6E\x61\x76","\x72\x65\x6D\x6F\x76\x65\x43\x6C\x61\x73\x73","\x25","\x68\x74\x6D\x6C","\x2E\x6C\x6F\x61\x64\x69\x6E\x67\x2D\x70\x61\x67\x65\x20\x2E\x63\x6F\x75\x6E\x74\x65\x72\x20\x68\x31","\x77\x69\x64\x74\x68","\x63\x73\x73","\x2E\x6C\x6F\x61\x64\x69\x6E\x67\x2D\x70\x61\x67\x65\x20\x2E\x63\x6F\x75\x6E\x74\x65\x72\x20\x68\x72","\x2E\x6C\x6F\x61\x64\x69\x6E\x67\x2D\x70\x61\x67\x65","\x73\x6C\x69\x64\x65\x55\x70","\x64\x65\x6C\x61\x79\x2D\x68\x69\x64\x65","\x61\x74\x74\x72","\x64\x65\x6C\x61\x79"];$(document)[_0xc6a7[6]](function(){$(_0xc6a7[5])[_0xc6a7[4]](_0xc6a7[0],function(){$(_0xc6a7[3])[_0xc6a7[2]](_0xc6a7[1])})});$(window)[_0xc6a7[4]](_0xc6a7[7],function(){if($(window)[_0xc6a7[8]]()){$(_0xc6a7[11])[_0xc6a7[10]](_0xc6a7[9])}else {$(_0xc6a7[11])[_0xc6a7[12]](_0xc6a7[9])}});$(document)[_0xc6a7[6]](function(){var _0x3db1x1=0;var _0x3db1x2=0;var _0x3db1x3=setInterval(function(){$(_0xc6a7[15])[_0xc6a7[14]](_0x3db1x2+ _0xc6a7[13]);$(_0xc6a7[18])[_0xc6a7[17]](_0xc6a7[16],_0x3db1x2+ _0xc6a7[13]);_0x3db1x1++;_0x3db1x2++;if(_0x3db1x1== 101){clearInterval(_0x3db1x3);var _0x3db1x4=$(_0xc6a7[19]);_0x3db1x4[_0xc6a7[23]](_0x3db1x4[_0xc6a7[22]](_0xc6a7[21]))[_0xc6a7[20]]()}},50)})
+  </script>
+  <script>
+  var slider = document.getElementById("myRange");
+  var output = document.getElementById("ccTrack");
+  output.innerHTML = slider.value;
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+  }
+  </script>
+</body>
+</html>
